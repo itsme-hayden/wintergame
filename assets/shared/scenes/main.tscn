@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://n2cn6u3asvfg"]
+
+[ext_resource type="Script" path="res://assets/shared/scenes/Main.cs" id="1_jvycv"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_jvycv")

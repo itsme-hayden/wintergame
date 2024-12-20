@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://gtr1bgo6wbs4"]
+
+[ext_resource type="Script" path="res://assets/shared/scenes/Game.cs" id="1_mpx4m"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_mpx4m")

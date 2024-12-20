@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceol50kgnupg6"]
+
+[ext_resource type="PackedScene" uid="uid://cpiv3o813cm00" path="res://assets/shared/scenes/micro_game.tscn" id="1_8vynd"]
+
+[node name="Asteroids" instance=ExtResource("1_8vynd")]
