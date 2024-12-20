@@ -17,6 +17,10 @@ config/features=PackedStringArray("4.3", "C#", "Mobile")
 run/max_fps=30
 config/icon="res://assets/shared/graphics/icon.svg"
 
+[autoload]
+
+GameSwitcher="*res://assets/shared/scenes/GameSwitcher.cs"
+
 [display]
 
 window/size/viewport_width=375
