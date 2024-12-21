@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class GameSwitcher : Node
+public partial class GameUtil : Node
 {
 	// I think I hate C# Docstrings >:(
 	// Summarize deez
@@ -11,22 +11,21 @@ public partial class GameSwitcher : Node
 	/// </summary>
 	public enum MicroGameType
 	{
+		HOME,
 		ASTEROIDS,
 		MAZE_SWIPER,
 		DINO_RUNNER
 	}
 
-	public MicroGame CurrentGame {get; set;}
+	public Node CurrentScene {get; private set;}
 	
 	public override void _Ready()
 	{
-
+		Viewport root = GetTree().Root;
+		CurrentScene = root.GetChild(root.GetChildCount() - 1);
 	}
 
-	public override void _Process(double delta)
-	{
-		
-	}
+	public override void _Process(double delta) { }
 
 	public void SwitchMicroGame(MicroGameType gameType)
 	{
@@ -34,15 +33,21 @@ public partial class GameSwitcher : Node
 		CallDeferred(nameof(DeferredSwitchMicroGame), GetMicroGameScenePath(gameType));
 	}
 
-	private void DeferredSwitchMicroGame(string path)
+	private void DeferredSwitchMicroGame(string path, bool transition = false)
 	{
-		CurrentGame?.Free();
+		CurrentScene.Free();
+
+		if(transition)
+		{
+			// Eventually, this will switch to a transition state first, 
+			// then it will move to the desired state
+		}
 
 		var nextGame = (PackedScene) GD.Load(path);
-		CurrentGame = nextGame.Instantiate<MicroGame>();
+		CurrentScene = nextGame.Instantiate<Node>();
 
-		GetTree().Root.AddChild(CurrentGame);
-		GetTree().CurrentScene = CurrentGame;
+		GetTree().Root.AddChild(CurrentScene);
+		GetTree().CurrentScene = CurrentScene;
 	}
 
 	private string GetMicroGameScenePath(MicroGameType gameType)
@@ -52,7 +57,7 @@ public partial class GameSwitcher : Node
             MicroGameType.ASTEROIDS => "res://assets/asteroids/scenes/asteroids.tscn",
 			// MicroGameType.DINO_RUNNER => "res://assets/",
 			// MicroGameType.MAZE_SWIPER => "res://assets/",
-            _ => null,
+            _ => "res://assets/shared/scenes/main.tscn",
         };
     }
 }

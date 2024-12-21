@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpiv3o813cm00"]
-
-[ext_resource type="Script" path="res://assets/shared/scenes/MicroGame.cs" id="1_0k6ec"]
-
-[node name="MicroGame" type="Node"]
-script = ExtResource("1_0k6ec")

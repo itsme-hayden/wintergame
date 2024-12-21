@@ -19,7 +19,7 @@ config/icon="res://assets/shared/graphics/icon.svg"
 
 [autoload]
 
-GameSwitcher="*res://assets/shared/scenes/GameSwitcher.cs"
+GameUtil="*res://assets/shared/scenes/GameUtil.cs"
 
 [display]
 
