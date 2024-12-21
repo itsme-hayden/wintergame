@@ -43,7 +43,7 @@ public partial class GameUtil : Node
 			// then it will move to the desired state
 		}
 
-		var nextGame = (PackedScene) GD.Load(path);
+		var nextGame = GD.Load<PackedScene>(path);
 		CurrentScene = nextGame.Instantiate<Node>();
 
 		GetTree().Root.AddChild(CurrentScene);

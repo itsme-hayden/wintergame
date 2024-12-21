@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://fielq3kpewjx"]
+
+[ext_resource type="Texture2D" uid="uid://b04awfejmd3o5" path="res://assets/asteroids/graphics/rocket.png" id="1_m65o6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1s5du"]
+radius = 11.1803
+
+[node name="Rocket" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m65o6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_1s5du")
