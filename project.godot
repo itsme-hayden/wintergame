@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Winter-Game"
+config/version="0.0.1"
+run/main_scene="res://assets/shared/scenes/main.tscn"
+config/features=PackedStringArray("4.3", "C#", "Mobile")
+run/max_fps=30
+config/icon="res://assets/shared/graphics/icon.svg"
+
+[autoload]
+
+GameUtil="*res://assets/shared/scenes/GameUtil.cs"
+
+[display]
+
+window/size/viewport_width=375
+window/size/viewport_height=812
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+window/handheld/orientation=1
+window/vsync/vsync_mode=0
+
+[dotnet]
+
+project/assembly_name="Winter-Game"
+
+[rendering]
+
+renderer/rendering_method="mobile"
