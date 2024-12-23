@@ -33,15 +33,17 @@ public partial class GameUtil : Node
 		CallDeferred(nameof(DeferredSwitchMicroGame), GetMicroGameScenePath(gameType));
 	}
 
-	private void DeferredSwitchMicroGame(string path, bool transition = false)
+	private void DeferredSwitchMicroGame(string path)
 	{
 		CurrentScene.Free();
 
-		if(transition)
-		{
-			// Eventually, this will switch to a transition state first, 
-			// then it will move to the desired state
-		}
+		/*
+			if(transition)
+			{
+				// Eventually, this will switch to a transition state first, 
+				// then it will move to the desired state
+			}
+  		*/
 
 		var nextGame = (PackedScene) GD.Load(path);
 		CurrentScene = nextGame.Instantiate<Node>();
