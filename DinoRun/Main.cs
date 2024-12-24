@@ -41,7 +41,7 @@ public partial class Main : Node
 		pos.X += x; //TODO: make this not the worst thing ever
 		pos.Y = 485.0f; 
 		
-		_dino.Position = pos;
+		_dino.Position.X += speed;
 		pos.Y = 324.0f;
 		camera.Position += pos;
 

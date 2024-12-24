@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ccxpvfmd3j8tr"]
 
-[ext_resource type="Texture2D" uid="uid://dle21fxgq25pp" path="res://dinoAnimation/tile_0013.png" id="1_owk3y"]
+[ext_resource type="Texture2D" uid="uid://dle21fxgq25pp" path="res://dinoAnimation/dinoAnimation/tile_0013.png" id="1_owk3y"]
 
 [node name="cloud" type="Sprite2D"]
 texture_filter = 1

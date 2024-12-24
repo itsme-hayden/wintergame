@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccva8mty1khrx"]
 
-[ext_resource type="Texture2D" uid="uid://bhu7iogrc6nvq" path="res://dinoAnimation/tile_0015.png" id="1_s6gb2"]
+[ext_resource type="Texture2D" uid="uid://bhu7iogrc6nvq" path="res://dinoAnimation/dinoAnimation/tile_0015.png" id="1_s6gb2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ko8t0"]
 size = Vector2(8.14286, 16.7143)
@@ -14,5 +14,4 @@ texture = ExtResource("1_s6gb2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
 position = Vector2(-0.0714288, 0.0714292)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ko8t0")

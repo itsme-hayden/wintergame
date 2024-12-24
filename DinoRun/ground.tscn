@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cp3fekqm1g8uo"]
 
-[ext_resource type="Texture2D" uid="uid://bx4gw8l0jr1n6" path="res://dinoAnimation/tile_0065.png" id="1_hx5u5"]
+[ext_resource type="Texture2D" uid="uid://bx4gw8l0jr1n6" path="res://dinoAnimation/dinoAnimation/tile_0065.png" id="1_hx5u5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63nti"]
 size = Vector2(2238.5, 210)

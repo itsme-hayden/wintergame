@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://ojqmd316ht4h"]
 
 [ext_resource type="Script" path="res://Dino.cs" id="1_2obad"]
-[ext_resource type="Texture2D" uid="uid://dgrgh5r2p0gl1" path="res://dinoAnimation/tile_0286.png" id="1_6251i"]
-[ext_resource type="Texture2D" uid="uid://41581svpoe04" path="res://dinoAnimation/tile_0280.png" id="2_vbsq4"]
-[ext_resource type="Texture2D" uid="uid://b53mb8mmmjmjj" path="res://dinoAnimation/tile_0283.png" id="3_5gs0d"]
-[ext_resource type="Texture2D" uid="uid://dwpp26mwkvtor" path="res://dinoAnimation/tile_0284.png" id="4_topsi"]
-[ext_resource type="Texture2D" uid="uid://bihfnnwxx7w4y" path="res://dinoAnimation/tile_0285.png" id="5_dct7o"]
-[ext_resource type="Texture2D" uid="uid://di6c7r3xi6237" path="res://dinoAnimation/tile_0281.png" id="6_t3wr3"]
-[ext_resource type="Texture2D" uid="uid://c7gvg08k1kr2f" path="res://dinoAnimation/tile_0282.png" id="7_64uag"]
+[ext_resource type="Texture2D" uid="uid://dgrgh5r2p0gl1" path="res://dinoAnimation/dinoAnimation/tile_0286.png" id="1_6251i"]
+[ext_resource type="Texture2D" uid="uid://41581svpoe04" path="res://dinoAnimation/dinoAnimation/tile_0280.png" id="2_vbsq4"]
+[ext_resource type="Texture2D" uid="uid://b53mb8mmmjmjj" path="res://dinoAnimation/dinoAnimation/tile_0283.png" id="3_5gs0d"]
+[ext_resource type="Texture2D" uid="uid://dwpp26mwkvtor" path="res://dinoAnimation/dinoAnimation/tile_0284.png" id="4_topsi"]
+[ext_resource type="Texture2D" uid="uid://bihfnnwxx7w4y" path="res://dinoAnimation/dinoAnimation/tile_0285.png" id="5_dct7o"]
+[ext_resource type="Texture2D" uid="uid://di6c7r3xi6237" path="res://dinoAnimation/dinoAnimation/tile_0281.png" id="6_t3wr3"]
+[ext_resource type="Texture2D" uid="uid://c7gvg08k1kr2f" path="res://dinoAnimation/dinoAnimation/tile_0282.png" id="7_64uag"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_au0qm"]
 animations = [{
