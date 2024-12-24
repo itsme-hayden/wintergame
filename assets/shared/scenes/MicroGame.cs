@@ -19,7 +19,7 @@ public partial class MicroGame : Node
         _util = GetNode<GameUtil>("/root/GameUtil");
     }
 
-	private void EndMicroGame()
+	protected void EndMicroGame()
 	{
 		_util.SwitchMicroGame(GameUtil.MicroGameType.HOME);
 	}

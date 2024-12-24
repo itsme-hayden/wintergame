@@ -6,14 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38ad4"]
 size = Vector2(50, 50)
 
-[node name="Meteor" type="Area2D" groups=["meteors"]]
-scale = Vector2(3, 3)
+[node name="Meteor" type="RigidBody2D" groups=["meteors"]]
+gravity_scale = 0.0
 script = ExtResource("1_aocjk")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("1_y52mm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_38ad4")
+disabled = true

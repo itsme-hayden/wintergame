@@ -18,11 +18,15 @@ public partial class GameUtil : Node
 	}
 
 	public Node CurrentScene {get; private set;}
+
+	public Vector2 ViewportDimensions {get; private set;}
 	
 	public override void _Ready()
 	{
 		Viewport root = GetTree().Root;
 		CurrentScene = root.GetChild(root.GetChildCount() - 1);
+
+		ViewportDimensions = GetViewport().GetVisibleRect().Size;
 	}
 
 	public override void _Process(double delta) { }
@@ -33,15 +37,17 @@ public partial class GameUtil : Node
 		CallDeferred(nameof(DeferredSwitchMicroGame), GetMicroGameScenePath(gameType));
 	}
 
-	private void DeferredSwitchMicroGame(string path, bool transition = false)
+	private void DeferredSwitchMicroGame(string path)
 	{
 		CurrentScene.Free();
 
-		if(transition)
-		{
-			// Eventually, this will switch to a transition state first, 
-			// then it will move to the desired state
-		}
+		/*
+			if(transition)
+			{
+				// Eventually, this will switch to a transition state first, 
+				// then it will move to the desired state
+			}
+		*/
 
 		var nextGame = GD.Load<PackedScene>(path);
 		CurrentScene = nextGame.Instantiate<Node>();
