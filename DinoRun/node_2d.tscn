@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://ojqmd316ht4h"]
+
+[ext_resource type="Script" path="res://Dino.cs" id="1_2obad"]
+[ext_resource type="Texture2D" uid="uid://dgrgh5r2p0gl1" path="res://dinoAnimation/tile_0286.png" id="1_6251i"]
+[ext_resource type="Texture2D" uid="uid://41581svpoe04" path="res://dinoAnimation/tile_0280.png" id="2_vbsq4"]
+[ext_resource type="Texture2D" uid="uid://b53mb8mmmjmjj" path="res://dinoAnimation/tile_0283.png" id="3_5gs0d"]
+[ext_resource type="Texture2D" uid="uid://dwpp26mwkvtor" path="res://dinoAnimation/tile_0284.png" id="4_topsi"]
+[ext_resource type="Texture2D" uid="uid://bihfnnwxx7w4y" path="res://dinoAnimation/tile_0285.png" id="5_dct7o"]
+[ext_resource type="Texture2D" uid="uid://di6c7r3xi6237" path="res://dinoAnimation/tile_0281.png" id="6_t3wr3"]
+[ext_resource type="Texture2D" uid="uid://c7gvg08k1kr2f" path="res://dinoAnimation/tile_0282.png" id="7_64uag"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_au0qm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6251i")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vbsq4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5gs0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_topsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dct7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vbsq4")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_t3wr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_64uag")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1o3i"]
+size = Vector2(98, 89)
+
+[node name="Dino" type="Node2D"]
+
+[node name="Dino" type="CharacterBody2D" parent="."]
+script = ExtResource("1_2obad")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dino"]
+texture_filter = 1
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_au0qm")
+animation = &"run"
+autoplay = "idle"
+
+[node name="RunCol" type="CollisionShape2D" parent="Dino"]
+z_index = 1
+position = Vector2(1, 19.5)
+shape = SubResource("RectangleShape2D_f1o3i")

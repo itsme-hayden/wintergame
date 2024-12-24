@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfq1w3jjwovau"]
+
+[ext_resource type="PackedScene" uid="uid://cp3fekqm1g8uo" path="res://ground.tscn" id="1_7lm54"]
+[ext_resource type="Script" path="res://Main.cs" id="1_h1avu"]
+[ext_resource type="PackedScene" uid="uid://ojqmd316ht4h" path="res://node_2d.tscn" id="2_sqayd"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_h1avu")
+
+[node name="Ground" parent="." instance=ExtResource("1_7lm54")]
+
+[node name="Node2D" parent="." instance=ExtResource("2_sqayd")]
+position = Vector2(151, 373)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
