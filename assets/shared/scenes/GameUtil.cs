@@ -57,7 +57,7 @@ public partial class GameUtil : Node
         return gameType switch
         {
             MicroGameType.ASTEROIDS => "res://assets/asteroids/scenes/asteroids.tscn",
-			// MicroGameType.DINO_RUNNER => "res://assets/",
+			MicroGameType.DINO_RUNNER => "res://assets/dinorun/scenes/dinorunner.tscn",
 			// MicroGameType.MAZE_SWIPER => "res://assets/",
             _ => "res://assets/shared/scenes/main.tscn",
         };

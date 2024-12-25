@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfq1w3jjwovau"]
+
+[ext_resource type="Script" path="res://assets/dinorunner/scenes/DinoRunner.cs" id="1_ynt4l"]
+[ext_resource type="PackedScene" uid="uid://cp3fekqm1g8uo" path="res://assets/dinorunner/scenes/ground.tscn" id="2_velsm"]
+[ext_resource type="PackedScene" uid="uid://ojqmd316ht4h" path="res://assets/dinorunner/scenes/dino.tscn" id="3_asjtc"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ynt4l")
+
+[node name="Ground" parent="." instance=ExtResource("2_velsm")]
+
+[node name="Dino" parent="." instance=ExtResource("3_asjtc")]
+position = Vector2(151, 373)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
