@@ -1,10 +1,11 @@
 using Godot;
 using System;
-[Signal]
-public delegate void HitEventHandler();
 
 public partial class Dino : CharacterBody2D
 {
+	[Signal]
+	public delegate void HitEventHandler();
+
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
 
@@ -20,7 +21,7 @@ public partial class Dino : CharacterBody2D
 		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("jump") && IsOnFloor())
+		if (Input.IsActionJustPressed("dino-game-jump") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
 		}

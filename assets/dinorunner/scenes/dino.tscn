@@ -64,7 +64,7 @@ size = Vector2(98, 89)
 texture_filter = 1
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_au0qm")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
