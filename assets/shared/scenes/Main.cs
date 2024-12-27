@@ -11,6 +11,6 @@ public partial class Main : Node
 	{
 		// In the future, the start game will be randomized
 		// For now, just load Asteroids
-		GetNode<GameUtil>("/root/GameUtil").SwitchMicroGame(GameUtil.MicroGameType.ASTEROIDS);
+		GameUtil.SwitchMicroGame(GameUtil.MicroGameType.ASTEROIDS);
 	}
 }

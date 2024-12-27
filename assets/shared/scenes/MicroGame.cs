@@ -1,6 +1,8 @@
 using Godot;
 using System;
 
+// This class is seeming less and less useful.
+// It'll stay for now, but it may not forever.
 public partial class MicroGame : Node
 {
 	[Signal]
@@ -12,15 +14,12 @@ public partial class MicroGame : Node
 	[Export]
 	public int CompletionScore;
 
-	protected GameUtil _util;
-
-    public override void _Ready()
-    {
-        _util = GetNode<GameUtil>("/root/GameUtil");
-    }
+    public override void _Ready() { }
 
 	protected void EndMicroGame()
 	{
-		_util.SwitchMicroGame(GameUtil.MicroGameType.HOME);
+		EmitSignal(SignalName.MicroGameEnded);
+
+		GameUtil.SwitchMicroGame(GameUtil.MicroGameType.HOME);
 	}
 }

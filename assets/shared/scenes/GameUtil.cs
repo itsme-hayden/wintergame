@@ -17,27 +17,20 @@ public partial class GameUtil : Node
 		DINO_RUNNER
 	}
 
-	public Node CurrentScene {get; private set;}
+	public static GameUtil Instance {get; private set;}
 
-	public Vector2 ViewportDimensions {get; private set;}
-	
-	public override void _Ready()
-	{
-		Viewport root = GetTree().Root;
-		CurrentScene = root.GetChild(root.GetChildCount() - 1);
+	public static Node CurrentScene {get; private set;}
 
-		ViewportDimensions = GetViewport().GetVisibleRect().Size;
-	}
+	public static Vector2 ViewportDimensions {get; private set;}
 
-	public override void _Process(double delta) { }
 
-	public void SwitchMicroGame(MicroGameType gameType)
+	public static void SwitchMicroGame(MicroGameType gameType)
 	{
 		// Wait until it is safe to terminate the current game by deferring its destruction
-		CallDeferred(nameof(DeferredSwitchMicroGame), GetMicroGameScenePath(gameType));
+		Instance.CallDeferred(nameof(DeferredSwitchMicroGame), Instance.GetMicroGameScenePath(gameType));
 	}
 
-	private void DeferredSwitchMicroGame(string path)
+	private static void DeferredSwitchMicroGame(string path)
 	{
 		CurrentScene.Free();
 
@@ -52,8 +45,8 @@ public partial class GameUtil : Node
 		var nextGame = GD.Load<PackedScene>(path);
 		CurrentScene = nextGame.Instantiate<Node>();
 
-		GetTree().Root.AddChild(CurrentScene);
-		GetTree().CurrentScene = CurrentScene;
+		Instance.GetTree().Root.AddChild(CurrentScene);
+		Instance.GetTree().CurrentScene = CurrentScene;
 	}
 
 	private string GetMicroGameScenePath(MicroGameType gameType)
@@ -66,4 +59,14 @@ public partial class GameUtil : Node
             _ => "res://assets/shared/scenes/main.tscn",
         };
     }
+
+	public override void _Ready()
+	{
+		Viewport root = GetTree().Root;
+		GameUtil.Instance = GetNode<GameUtil>("/root/GameUtil");
+		GameUtil.CurrentScene = root.GetChild(root.GetChildCount() - 1);
+		GameUtil.ViewportDimensions = GetViewport().GetVisibleRect().Size;
+	}
+
+	public override void _Process(double delta) { }
 }
