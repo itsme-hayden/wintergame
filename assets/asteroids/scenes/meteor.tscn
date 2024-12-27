@@ -7,6 +7,7 @@
 size = Vector2(50, 50)
 
 [node name="Meteor" type="RigidBody2D" groups=["meteors"]]
+collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_aocjk")
 metadata/_edit_group_ = true
@@ -18,4 +19,3 @@ texture = ExtResource("1_y52mm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_38ad4")
-disabled = true

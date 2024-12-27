@@ -42,16 +42,15 @@ public partial class Asteroids : MicroGame
 				meteor.Position = spawn.Position;
 				meteor.Rotation = spawn.Rotation;
 				meteor.MoveTowardCenter(_rocket.Position);
-				// The meteors are slowing down for some reason >:(
 				meteor.AngularVelocity = MeteorVelocities[GD.Randi() % MeteorVelocities.Length] * 16;
-				// meteor.LinearVelocity = new Vector2(0, 0); // Some kind of ray towards the center
 				AddChild(meteor);
 			}
 		}
 	}
 
-	public void OnRocketHit()
+	public void OnRocketHit(Node2D body)
 	{
-		EndMicroGame();
+		GD.Print("GAMEOVER");
+		// EndMicroGame();
 	}
 }
