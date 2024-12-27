@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqpdshbnsrhle"]
+
+[ext_resource type="Texture2D" uid="uid://cwxlb37go56dh" path="res://Assets/StarEssence.png" id="1_2pj4t"]
+[ext_resource type="Script" path="res://StarDust.cs" id="1_jxdou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exsyu"]
+size = Vector2(8, 8)
+
+[node name="StarDust" type="Area2D"]
+script = ExtResource("1_jxdou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_exsyu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_2pj4t")
+
+[connection signal="body_entered" from="." to="." method="_on_stardust_body_entered"]

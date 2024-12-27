@@ -6,6 +6,8 @@ public partial class Player : CharacterBody2D
     private const int GridSize = 10;  // Size of each grid cell
     private const float CollisionBuffer = 2f;  // Buffer distance to prevent false invalid checks
 
+    public bool HasKey { get; set; } = false;
+
     private Vector2 _velocity = Vector2.Zero;
     private bool _isSliding = false;
     private Vector2 _direction = Vector2.Zero;
@@ -80,7 +82,7 @@ public partial class Player : CharacterBody2D
         var query = new PhysicsPointQueryParameters2D
         {
             Position = bufferPosition,
-            CollideWithAreas = true,  // Check for area colliders
+            CollideWithAreas = false,  // Check for area colliders, turned off so it can collide with exit
             CollideWithBodies = true  // Check for body colliders (walls)
         };
 

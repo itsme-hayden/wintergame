@@ -1,7 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmd26wkdmtglk"]
+[gd_scene load_steps=8 format=3 uid="uid://dmd26wkdmtglk"]
 
 [ext_resource type="Script" path="res://Exit.cs" id="1_ch1ch"]
-[ext_resource type="Texture2D" uid="uid://cphuso6h16na3" path="res://Assets/Bit-Bonanza-10x10-v-5.0/Colored/no-background/Misc.png" id="1_lpuig"]
+[ext_resource type="Texture2D" uid="uid://dknen7d3p7cgc" path="res://Assets/Bit-Bonanza-10x10-v-5.0/Colored/no-background/UI.png" id="2_6kwkm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uf7g"]
+atlas = ExtResource("2_6kwkm")
+region = Rect2(200, 90, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq820"]
+atlas = ExtResource("2_6kwkm")
+region = Rect2(190, 90, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjh4l"]
+atlas = ExtResource("2_6kwkm")
+region = Rect2(180, 90, 10, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2folw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uf7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq820")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjh4l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3s2nx"]
 size = Vector2(7, 8)
@@ -9,12 +38,12 @@ size = Vector2(7, 8)
 [node name="Exit" type="Area2D"]
 script = ExtResource("1_ch1ch")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_lpuig")
-region_enabled = true
-region_rect = Rect2(0, 70, 10, 10)
+sprite_frames = SubResource("SpriteFrames_2folw")
+frame_progress = 0.928135
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_3s2nx")
+disabled = true

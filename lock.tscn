@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyteedpd8dd8w"]
+
+[ext_resource type="Texture2D" uid="uid://dknen7d3p7cgc" path="res://Assets/Bit-Bonanza-10x10-v-5.0/Colored/no-background/UI.png" id="1_5vsq8"]
+[ext_resource type="Script" path="res://Lock.cs" id="1_uung1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38kso"]
+size = Vector2(6.5, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gaslg"]
+size = Vector2(8, 8)
+
+[node name="Lock" type="Area2D"]
+script = ExtResource("1_uung1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_38kso")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_5vsq8")
+region_enabled = true
+region_rect = Rect2(70, 80, 10, 10)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="SecondCollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_gaslg")
+
+[connection signal="body_entered" from="." to="." method="_on_lock_body_entered"]

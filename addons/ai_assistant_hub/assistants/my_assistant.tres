@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="AIAssistantResource" load_steps=6 format=3 uid="uid://dfpxc8whmdjev"]
+
+[ext_resource type="Script" path="res://addons/ai_assistant_hub/quick_prompts/ai_quick_prompt_resource.gd" id="1_x0wa4"]
+[ext_resource type="Resource" uid="uid://ctsacx8y12ipq" path="res://addons/ai_assistant_hub/quick_prompts/code_review.tres" id="2_e2i00"]
+[ext_resource type="Script" path="res://addons/ai_assistant_hub/assistants/ai_assistant_resource.gd" id="2_pcs2v"]
+[ext_resource type="Texture2D" uid="uid://qjvopjqelt0m" path="res://addons/ai_assistant_hub/graphics/icons/linear_32_3dmsicons.png" id="4_dltca"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5y0v"]
+atlas = ExtResource("4_dltca")
+region = Rect2(0, 450, 31.2434, 30)
+
+[resource]
+script = ExtResource("2_pcs2v")
+type_name = "Helper"
+type_icon = SubResource("AtlasTexture_k5y0v")
+ai_model = "llama3.2:latest"
+ai_description = "You are a useful Godot AI assistant. You can write high quality C# code for Godot 4. You are chatting with an inexperienced developer and every code request you receive is for C#."
+use_custom_temperature = false
+custom_temperature = 0.5
+quick_prompts = Array[ExtResource("1_x0wa4")]([ExtResource("2_e2i00")])

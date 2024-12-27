@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://7psq7pty3quk"]
+
+[ext_resource type="Script" path="res://Key.cs" id="1_xoemd"]
+[ext_resource type="Texture2D" uid="uid://dq3k48xo5v5i8" path="res://Assets/Bit-Bonanza-10x10-v-5.0/Colored/no-background/Tools-removebg-preview.png" id="2_2t8pn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jphsa"]
+size = Vector2(5, 5)
+
+[node name="Key" type="Area2D"]
+script = ExtResource("1_xoemd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(5, 5)
+texture = ExtResource("2_2t8pn")
+region_enabled = true
+region_rect = Rect2(0, 60, 10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_jphsa")
+
+[connection signal="body_entered" from="." to="." method="_on_key_body_entered"]
