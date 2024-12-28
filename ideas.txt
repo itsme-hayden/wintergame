@@ -1,6 +1,5 @@
 enums for code organization
 coins
-change to landscape, 812x375
 
 fixed number of swipes
 collectible hats

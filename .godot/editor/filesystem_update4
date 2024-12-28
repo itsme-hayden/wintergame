@@ -1,6 +1,6 @@
-res://player.tscn
-res://addons/ai_assistant_hub/assistants/my_assistant.tres
 res://Level1.tscn
+res://addons/ai_assistant_hub/assistants/my_assistant.tres
+res://player.tscn
 res://Level2.tscn
 res://key.tscn
 res://lock.tscn
@@ -8,8 +8,7 @@ res://exit.tscn
 res://star_dust.tscn
 res://Exit.cs
 res://StarDust.cs
-res://Level1.cs
+res://Level.cs
 res://Lock.cs
 res://Key.cs
 res://Player.cs
-res://ideas.txt

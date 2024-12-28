@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bugvm1d6r2na0"]
+[gd_scene load_steps=6 format=3 uid="uid://bxb0p3lhi6h0x"]
 
 [ext_resource type="Script" path="res://Level1.cs" id="1_8kxjq"]
 [ext_resource type="PackedScene" uid="uid://c7tscc27n0hbr" path="res://player.tscn" id="2_1cs3f"]
@@ -230,7 +230,7 @@ zoom = Vector2(4.6, 4.6)
 
 [node name="Exit" parent="." instance=ExtResource("4_817k2")]
 position = Vector2(70, 90)
-NextLevelPath = "res://Levels/Level2.tscn"
+NextLevelPath = "res://Level2.tscn"
 
 [node name="StarDust" parent="." instance=ExtResource("5_mjodl")]
 position = Vector2(20, 50)

@@ -1,18 +1,18 @@
 using Godot;
 using System;
 
-public partial class Level1 : Node2D
+public partial class Level : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 	}
 
-	public void _on_exit_body_entered(Node body)
-	{
-		//touches star, finished level
-		GetTree().ChangeSceneToFile("res://Level2.tscn");
-	}
+	// public void _on_exit_body_entered(Node body)
+	// {
+	// 	//touches star, finished level
+	// 	GetTree().ChangeSceneToFile("res://Level2.tscn");
+	// }
 
 	public void ResetScene()
     {
