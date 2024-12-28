@@ -10,69 +10,81 @@
 script = ExtResource("1_8kxjq")
 
 [node name="Player" parent="." instance=ExtResource("2_1cs3f")]
-position = Vector2(20, 100)
+position = Vector2(0, 90)
 
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Wall" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(55, 105)
+position = Vector2(55, 95)
 
 [node name="Wall2" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(45, 105)
+position = Vector2(45, 95)
 
 [node name="Wall3" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(35, 105)
+position = Vector2(35, 95)
 
 [node name="Wall4" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(65, 105)
+position = Vector2(65, 95)
 
 [node name="Wall8" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(75, 105)
+position = Vector2(75, 95)
 
 [node name="Wall9" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(85, 105)
+position = Vector2(85, 95)
 
 [node name="Wall10" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(95, 105)
+position = Vector2(95, 95)
 
 [node name="Wall11" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(105, 105)
+position = Vector2(105, 95)
 
 [node name="Wall12" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(115, 105)
+position = Vector2(115, 95)
 
 [node name="Wall13" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 105)
+position = Vector2(155, 95)
 
-[node name="Wall60" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(125, 105)
+[node name="Wall62" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(145, 95)
 
-[node name="Wall14" parent="Walls" instance=ExtResource("3_u22do")]
+[node name="Wall63" parent="Walls" instance=ExtResource("3_u22do")]
 position = Vector2(135, 95)
 
-[node name="Wall15" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 95)
+[node name="Wall60" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(125, 95)
 
-[node name="Wall16" parent="Walls" instance=ExtResource("3_u22do")]
+[node name="Wall14" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(125, 85)
+
+[node name="Wall68" parent="Walls" instance=ExtResource("3_u22do")]
 position = Vector2(5, 85)
 
+[node name="Wall69" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(-5, 55)
+
+[node name="Wall15" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(95, 25)
+
+[node name="Wall16" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(-15, 85)
+
 [node name="Wall17" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 75)
+position = Vector2(-15, 75)
 
 [node name="Wall18" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 65)
+position = Vector2(-15, 65)
 
 [node name="Wall19" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 55)
+position = Vector2(-15, 55)
 
 [node name="Wall20" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 45)
+position = Vector2(-15, 45)
 
 [node name="Wall21" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 35)
+position = Vector2(-15, 35)
 
 [node name="Wall22" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 25)
+position = Vector2(-15, 25)
 
 [node name="Wall44" parent="Walls" instance=ExtResource("3_u22do")]
 position = Vector2(5, 15)
@@ -117,85 +129,97 @@ position = Vector2(35, 85)
 position = Vector2(115, 55)
 
 [node name="Wall47" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(65, 15)
+position = Vector2(-5, 15)
 
 [node name="Wall48" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(105, 95)
+position = Vector2(105, 85)
 
 [node name="Wall23" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 85)
+position = Vector2(155, 85)
 
 [node name="Wall24" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 75)
+position = Vector2(155, 75)
 
 [node name="Wall25" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 65)
+position = Vector2(155, 65)
 
 [node name="Wall26" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 55)
+position = Vector2(155, 55)
 
 [node name="Wall27" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 45)
+position = Vector2(155, 45)
 
 [node name="Wall28" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 35)
+position = Vector2(155, 35)
 
 [node name="Wall29" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 25)
+position = Vector2(155, 25)
 
 [node name="Wall30" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 15)
+position = Vector2(125, 75)
+
+[node name="Wall64" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(155, 15)
+
+[node name="Wall65" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(145, 15)
 
 [node name="Wall5" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(25, 105)
+position = Vector2(25, 95)
 
 [node name="Wall6" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(15, 105)
+position = Vector2(15, 95)
 
 [node name="Wall7" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 105)
+position = Vector2(-15, 95)
+
+[node name="Wall66" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(-5, 95)
+
+[node name="Wall67" parent="Walls" instance=ExtResource("3_u22do")]
+position = Vector2(5, 95)
 
 [node name="Wall31" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(55, 5)
+position = Vector2(55, 15)
 
 [node name="Wall32" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(45, 5)
+position = Vector2(45, 15)
 
 [node name="Wall33" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(35, 5)
+position = Vector2(35, 15)
 
 [node name="Wall34" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(65, 5)
+position = Vector2(65, 15)
 
 [node name="Wall35" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(75, 5)
+position = Vector2(75, 15)
 
 [node name="Wall36" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(85, 5)
+position = Vector2(85, 15)
 
 [node name="Wall37" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(95, 5)
+position = Vector2(95, 15)
 
 [node name="Wall38" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(105, 5)
+position = Vector2(105, 15)
 
 [node name="Wall39" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(115, 5)
+position = Vector2(115, 15)
 
 [node name="Wall40" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(135, 5)
+position = Vector2(135, 15)
 
 [node name="Wall61" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(125, 5)
+position = Vector2(125, 15)
 
 [node name="Wall41" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(25, 5)
+position = Vector2(25, 15)
 
 [node name="Wall42" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(15, 5)
+position = Vector2(15, 15)
 
 [node name="Wall43" parent="Walls" instance=ExtResource("3_u22do")]
-position = Vector2(5, 5)
+position = Vector2(-15, 15)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(75, 60)
@@ -205,9 +229,9 @@ zoom = Vector2(4.6, 4.6)
 position = Vector2(60, 80)
 
 [node name="StarDust" parent="." instance=ExtResource("5_mjodl")]
-position = Vector2(20, 30)
+position = Vector2(20, 50)
 
 [node name="StarDust2" parent="." instance=ExtResource("5_mjodl")]
-position = Vector2(120, 100)
+position = Vector2(120, 90)
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

@@ -93,11 +93,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Max\\Desktop\\GameMakerProjects\\swiperPuzzle\\SwiperPuzzle.csproj",
+      "projectUniqueName": "C:\\Users\\Max\\Desktop\\GameMakerProjects\\New folder\\wintergame\\SwiperPuzzle.csproj",
       "projectName": "SwiperPuzzle",
-      "projectPath": "C:\\Users\\Max\\Desktop\\GameMakerProjects\\swiperPuzzle\\SwiperPuzzle.csproj",
+      "projectPath": "C:\\Users\\Max\\Desktop\\GameMakerProjects\\New folder\\wintergame\\SwiperPuzzle.csproj",
       "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Max\\Desktop\\GameMakerProjects\\swiperPuzzle\\.godot\\mono\\temp\\obj\\",
+      "outputPath": "C:\\Users\\Max\\Desktop\\GameMakerProjects\\New folder\\wintergame\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config"

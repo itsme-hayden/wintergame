@@ -15,3 +15,21 @@ C:\Users\Max\Desktop\GameMakerProjects\swiperPuzzle\.godot\mono\temp\obj\Debug\r
 C:\Users\Max\Desktop\GameMakerProjects\swiperPuzzle\.godot\mono\temp\obj\Debug\SwiperPuzzle.pdb
 C:\Users\Max\Desktop\GameMakerProjects\swiperPuzzle\.godot\mono\temp\obj\Debug\SwiperPuzzle.genruntimeconfig.cache
 C:\Users\Max\Desktop\GameMakerProjects\swiperPuzzle\.godot\mono\temp\obj\Debug\ref\SwiperPuzzle.dll
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\bin\Debug\SwiperPuzzle.deps.json
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\bin\Debug\SwiperPuzzle.runtimeconfig.json
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\bin\Debug\SwiperPuzzle.dll
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\bin\Debug\SwiperPuzzle.pdb
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.csproj.AssemblyReference.cache
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.AssemblyInfoInputs.cache
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.AssemblyInfo.cs
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.csproj.CoreCompileInputs.cache
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.sourcelink.json
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPu.C52DCBA7.Up2Date
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.dll
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\refint\SwiperPuzzle.dll
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.pdb
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\SwiperPuzzle.genruntimeconfig.cache
+C:\Users\Max\Desktop\GameMakerProjects\New folder\wintergame\.godot\mono\temp\obj\Debug\ref\SwiperPuzzle.dll
