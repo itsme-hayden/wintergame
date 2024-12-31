@@ -40,17 +40,21 @@ public partial class DinoRunner : MicroGame
 		//GD.Print("START GENERATE");
 		if (obstacles.Count == 0 || last_obs.Position.X < _dino.Position.X + GD.RandRange(50,300))
 		{
-			GD.Print("IN IF STATEMENT");
+			//GD.Print("IN IF STATEMENT");
 			var obs_type = obstacle_types[GD.RandRange(0,3)]; //I don't like upper being inclusive
 			Node2D obs;
-			int max_obs = 3; //TODO: Add clusters using loop
-			obs = (Node2D) obs_type.Instantiate();
-			var obs_height = obs.GetNode<Sprite2D>("Sprite2D").Texture.GetHeight();
-			var obs_scale = obs.GetNode<Sprite2D>("Sprite2D").Scale;
-			var obs_x = GetWindow().Size.X + _dino.Position.X + 100;
-			var obs_y = GetWindow().Size.Y - ground_height - (obs_height * obs_scale.Y / 2) - 90;
-			last_obs = obs;
-			add_obs(obs,obs_x,obs_y);
+			int max_obs = 3; 
+			for (int i = 0; i < GD.RandRange(0,max_obs); i++)
+			{
+				obs = (Node2D) obs_type.Instantiate();
+				var obs_height = obs.GetNode<Sprite2D>("Sprite2D").Texture.GetHeight();
+				var obs_scale = obs.GetNode<Sprite2D>("Sprite2D").Scale;
+				var obs_x = GetWindow().Size.X + _dino.Position.X + 100 + (i * 100);
+				var obs_y = GetWindow().Size.Y - ground_height - (obs_height * obs_scale.Y / 2) - 90;
+				last_obs = obs;
+				add_obs(obs,obs_x,obs_y);
+			}
+			
 		}
 		
 	}
@@ -61,8 +65,23 @@ public partial class DinoRunner : MicroGame
 		pos.X = x;
 		pos.Y = y;
 		obs.Position = pos;
+        obs.Connect("body_entered", new Callable(this, MethodName.Hit_obs));
 		AddChild(obs);
 		obstacles.Add(obs);
+	}
+
+	public void Hit_obs(Node2D body)
+	{
+		if (body.Name == "Dino")
+		{
+			game_over();	//TODO: This is where Joe needs to put stuff to connect to larger game
+		}
+	}
+
+	public void game_over()
+	{
+		GetTree().Paused = true;
+		
 	}
 
 	// Called when the node enters the scene tree for the first time.

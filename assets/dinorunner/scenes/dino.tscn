@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ojqmd316ht4h"]
+[gd_scene load_steps=11 format=3 uid="uid://ojqmd316ht4h"]
 
 [ext_resource type="Texture2D" uid="uid://dgrgh5r2p0gl1" path="res://assets/dinorunner/graphics/tile_0286.png" id="1_6251i"]
 [ext_resource type="Script" path="res://assets/dinorunner/scenes/Dino.cs" id="1_b0xhs"]
@@ -28,16 +28,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("3_5gs0d")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("4_topsi")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("5_dct7o")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("2_vbsq4")
 }],
 "loop": true,
@@ -62,14 +62,12 @@ size = Vector2(98, 89)
 [node name="Dino" type="CharacterBody2D"]
 script = ExtResource("1_b0xhs")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dino"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_au0qm")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.904494
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
 z_index = 1

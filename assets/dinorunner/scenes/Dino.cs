@@ -7,7 +7,7 @@ public partial class Dino : CharacterBody2D
 	public delegate void HitEventHandler();
 
 	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+	public const float JumpVelocity = -600.0f;
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -49,4 +49,6 @@ public partial class Dino : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+	
 }
