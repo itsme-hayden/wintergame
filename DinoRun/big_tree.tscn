@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccva8mty1khrx"]
 
-[ext_resource type="Texture2D" uid="uid://bhu7iogrc6nvq" path="res://dinoAnimation/dinoAnimation/tile_0015.png" id="1_s6gb2"]
+[ext_resource type="Texture2D" uid="uid://bhu7iogrc6nvq" path="res://assets/dinorunner/graphics/tile_0015.png" id="1_s6gb2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ko8t0"]
-size = Vector2(8.14286, 16.7143)
+size = Vector2(8.14286, 16.0714)
 
 [node name="BigTree" type="Area2D"]
 texture_filter = 1
@@ -11,7 +11,9 @@ scale = Vector2(7, 7)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_s6gb2")
+offset = Vector2(0, -8)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
-position = Vector2(-0.0714288, 0.0714292)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ko8t0")

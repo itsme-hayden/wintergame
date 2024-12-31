@@ -1,12 +1,16 @@
 using Godot;
 using System;
+
 [Signal]
-public delegate void HitEventHandler();
+	public delegate void HitEventHandler();
 
 public partial class Dino : CharacterBody2D
 {
+	// [Signal]
+	// public delegate void HitEventHandler();
+
 	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+	public const float JumpVelocity = -600.0f;
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -23,14 +27,17 @@ public partial class Dino : CharacterBody2D
 		if (Input.IsActionJustPressed("jump") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
+			//GD.Print("JUMP");
 		}
 		else if (!IsOnFloor())
 		{
 			animatedSprite2D.Animation = "jump";
+			//GD.Print("JUMP");
 		}
 		else
 		{
 			animatedSprite2D.Animation = "run";
+			//GD.Print("RUN");
 		}
 
 		// Get the input direction and handle the movement/deceleration.
