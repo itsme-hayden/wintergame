@@ -1,4 +1,5 @@
 using Godot;
+using System.Collections.Generic;
 public partial class Player : CharacterBody2D
 
 {
@@ -6,11 +7,23 @@ public partial class Player : CharacterBody2D
     private const int GridSize = 10;  // Size of each grid cell
     private const float CollisionBuffer = 2f;  // Buffer distance to prevent false invalid checks
 
-    public bool HasKey { get; set; } = false;
-
+    private HashSet<string> keysCollected = new HashSet<string>();
     private Vector2 _velocity = Vector2.Zero;
     private bool _isSliding = false;
     private Vector2 _direction = Vector2.Zero;
+
+
+public void CollectKey(string color)
+    {
+        keysCollected.Add(color);
+        Lock.NotifyAllLocks(color);
+    }
+
+ public bool HasKey(string color)
+    {
+        return keysCollected.Contains(color);
+    }
+
 
     public override void _PhysicsProcess(double delta)
     {

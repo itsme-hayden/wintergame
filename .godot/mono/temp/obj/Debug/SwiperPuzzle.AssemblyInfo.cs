@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SwiperPuzzle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+956304961cd88b07971ab78e54caa6f443be38b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8eeee088ac4382586b9a2262b576be4e69ba320")]
 [assembly: System.Reflection.AssemblyProductAttribute("SwiperPuzzle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SwiperPuzzle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,7 +16,7 @@ llm_api="ollama_api"
 [application]
 
 config/name="SwiperPuzzle"
-run/main_scene="res://Level1.tscn"
+run/main_scene="res://Levels/Level1.tscn"
 config/features=PackedStringArray("4.3", "C#", "Mobile")
 config/icon="res://icon.svg"
 
