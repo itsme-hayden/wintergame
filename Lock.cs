@@ -6,6 +6,7 @@ public partial class Lock : Area2D
 {
 
 	[Export] private string LockColor = "yellow"; // sets default color for lock to yellow
+	private bool disabledPhysics = false;
     private static List<Lock> allLocks = new List<Lock>();
 
 	private StaticBody2D _staticBody;
@@ -26,21 +27,24 @@ public partial class Lock : Area2D
 
 	private void _on_lock_body_entered(Node2D body)
 	{
-		if (body is Player player )
+		// if (body is Player player )
+		if (disabledPhysics)
 		{
-			if (player.HasKey(LockColor)){
+			// if (player.HasKey(LockColor)){
 			QueueFree();
 
-			}
-			// player.HasKey = false;
-		}
+			// }
+		} 
+
 	}
+	
 
 	public void disablePhysics(string color)
 	{
 		if (color == LockColor){
 			_staticBody.QueueFree();
 			_staticBody = null;
+			disabledPhysics = true;
 		}
 
 	}

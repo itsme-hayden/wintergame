@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bippx7p2xauoj"]
+[gd_scene load_steps=8 format=3 uid="uid://bippx7p2xauoj"]
 
+[ext_resource type="Script" path="res://Level.cs" id="1_6kc4g"]
 [ext_resource type="PackedScene" uid="uid://c7tscc27n0hbr" path="res://player.tscn" id="1_xbmri"]
 [ext_resource type="PackedScene" uid="uid://ct0d3jdg85gkc" path="res://wall.tscn" id="2_te1xa"]
 [ext_resource type="PackedScene" uid="uid://dmd26wkdmtglk" path="res://exit.tscn" id="3_racsx"]
@@ -7,7 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dyteedpd8dd8w" path="res://lock.tscn" id="5_6r35s"]
 [ext_resource type="PackedScene" uid="uid://cqpdshbnsrhle" path="res://star_dust.tscn" id="6_u7f5b"]
 
-[node name="Level2" type="Node2D"]
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_6kc4g")
 
 [node name="Player" parent="." instance=ExtResource("1_xbmri")]
 position = Vector2(0, 90)
@@ -81,7 +83,7 @@ position = Vector2(-15, 15)
 position = Vector2(145, 75)
 
 [node name="Wall49" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(25, 65)
+position = Vector2(35, 55)
 
 [node name="Wall58" parent="Walls" instance=ExtResource("2_te1xa")]
 position = Vector2(25, 55)
@@ -90,13 +92,13 @@ position = Vector2(25, 55)
 position = Vector2(145, 85)
 
 [node name="Wall50" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(95, 75)
+position = Vector2(85, 55)
 
 [node name="Wall70" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(75, 85)
+position = Vector2(115, 55)
 
 [node name="Wall76" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(65, 85)
+position = Vector2(55, 65)
 
 [node name="Wall74" parent="Walls" instance=ExtResource("2_te1xa")]
 position = Vector2(75, 55)
@@ -117,7 +119,7 @@ position = Vector2(35, 25)
 position = Vector2(145, 95)
 
 [node name="Wall62" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(115, 65)
+position = Vector2(85, 85)
 
 [node name="Wall52" parent="Walls" instance=ExtResource("2_te1xa")]
 position = Vector2(45, 65)
@@ -144,19 +146,19 @@ position = Vector2(145, 45)
 position = Vector2(15, 35)
 
 [node name="Wall57" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(55, 85)
+position = Vector2(45, 85)
 
 [node name="Wall59" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(55, 75)
+position = Vector2(95, 25)
 
 [node name="Wall54" parent="Walls" instance=ExtResource("2_te1xa")]
 position = Vector2(105, 65)
 
 [node name="Wall46" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(25, 85)
+position = Vector2(25, 75)
 
 [node name="Wall47" parent="Walls" instance=ExtResource("2_te1xa")]
-position = Vector2(25, 75)
+position = Vector2(25, 65)
 
 [node name="Wall48" parent="Walls" instance=ExtResource("2_te1xa")]
 position = Vector2(135, 95)
@@ -248,9 +250,10 @@ zoom = Vector2(4.6, 4.6)
 
 [node name="Exit" parent="." instance=ExtResource("3_racsx")]
 position = Vector2(150, 40)
+NextLevelPath = "res://Levels/Level4.tscn"
 
 [node name="Key" parent="." instance=ExtResource("4_li64d")]
-position = Vector2(105, 85)
+position = Vector2(55, 75)
 
 [node name="Key2" parent="." instance=ExtResource("4_li64d")]
 position = Vector2(-5, 25)
@@ -264,7 +267,7 @@ frame_progress = 0.91703
 position = Vector2(30, 40)
 
 [node name="Lock2" parent="." instance=ExtResource("5_6r35s")]
-position = Vector2(40, 70)
+position = Vector2(30, 90)
 LockColor = "white"
 
 [node name="AnimatedSprite2D" parent="Lock2" index="1"]
@@ -272,7 +275,7 @@ frame = 1
 frame_progress = 0.821711
 
 [node name="StarDust" parent="." instance=ExtResource("6_u7f5b")]
-position = Vector2(50, 90)
+position = Vector2(40, 70)
 
 [node name="StarDust2" parent="." instance=ExtResource("6_u7f5b")]
 position = Vector2(150, 70)
