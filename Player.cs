@@ -18,6 +18,10 @@ public void CollectKey(string color)
         keysCollected.Add(color);
         Lock.NotifyAllLocks(color);
     }
+public void ResetKeys()
+    {
+        keysCollected.Clear();
+    }
 
  public bool HasKey(string color)
     {

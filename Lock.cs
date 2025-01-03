@@ -10,6 +10,12 @@ public partial class Lock : Area2D
     private static List<Lock> allLocks = new List<Lock>();
 
 	private StaticBody2D _staticBody;
+
+	public void resetLocksList()
+	{
+		allLocks.Clear();
+	}
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -41,6 +47,9 @@ public partial class Lock : Area2D
 
 	public void disablePhysics(string color)
 	{
+		//deal with null reference
+		if (this == null) return;
+
 		if (color == LockColor){
 			_staticBody.QueueFree();
 			_staticBody = null;
