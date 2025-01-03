@@ -48,15 +48,24 @@ public partial class Level : Node2D
         // // Reload the current scene
         // GetTree().ChangeSceneToFile(currentScenePath);
     }
+//check if input is reset whenever input is detected
+	public override void _Input(InputEvent @event) {
+		if (@event.IsActionReleased("reset"))
+		{
+			// reset scene
+			ResetScene();
+		}
+		}
+	
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustReleased("reset"))
-		{
-			// reset scene
-			ResetScene();
+		// if (Input.IsActionJustReleased("reset"))
+		// {
+		// 	// reset scene
+		// 	ResetScene();
 
-		}
+		// }
 	}
 }
