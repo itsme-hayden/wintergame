@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/dinorunner/scenes/DinoRunner.cs" id="1_ynt4l"]
 [ext_resource type="PackedScene" uid="uid://cp3fekqm1g8uo" path="res://assets/dinorunner/scenes/ground.tscn" id="2_velsm"]
 [ext_resource type="PackedScene" uid="uid://ojqmd316ht4h" path="res://assets/dinorunner/scenes/dino.tscn" id="3_asjtc"]
-[ext_resource type="PackedScene" path="res://assets/dinorunner/scenes/cloud.tscn" id="4_fnlxi"]
+[ext_resource type="PackedScene" uid="uid://ccxpvfmd3j8tr" path="res://assets/dinorunner/scenes/cloud.tscn" id="4_fnlxi"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ynt4l")
@@ -15,7 +15,7 @@ position = Vector2(0, 256)
 position = Vector2(100, 192)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(408, 187)
+position = Vector2(407, 159)
 
 [node name="cloud" parent="." instance=ExtResource("4_fnlxi")]
 position = Vector2(542.5, 46.5)

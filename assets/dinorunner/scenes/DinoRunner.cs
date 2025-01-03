@@ -114,7 +114,7 @@ public partial class DinoRunner : MicroGame
 		pos.X += _speed * (float) delta;  // Conversion: (Pixels / seconds) * seconds
 		_dino.Position = pos;
 		pos.X += 300;
-		_camera.Position = pos;
+		_camera.Position = new Vector2(pos.X, _camera.Position.Y);
 
 		generate_obs();
 
