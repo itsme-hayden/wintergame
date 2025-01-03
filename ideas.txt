@@ -3,5 +3,4 @@ coins
 
 fixed number of swipes
 collectible hats
-2 people 2 puzzles simultaneously
-different color keys
+create enemies / spikes/ water (non enterable tiles)
