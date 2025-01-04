@@ -25,9 +25,12 @@ public partial class Lock : Area2D
 
 	public static void NotifyAllLocks(string color)
     {
-        foreach (var lockInstance in allLocks)
+        foreach (Lock lockInstance in allLocks)
         {
-            lockInstance.disablePhysics(color);
+			if(IsInstanceValid(lockInstance))
+			{
+            	lockInstance.disablePhysics(color);
+			}
         }
     }
 

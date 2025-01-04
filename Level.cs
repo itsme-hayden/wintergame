@@ -16,28 +16,31 @@ public partial class Level : Node2D
 
 	public void ResetScene()
     {
+		
 		// cleanup scene before reloading
 		 foreach (Node child in GetTree().CurrentScene.GetChildren())
         {
+			
             // Check if the child is of type Key
             if (child is Key )
             {
                 // Remove the child from the scene
                 child.QueueFree();
             }
-			else if (child is Lock _lock)
+			if (child is Lock _lock)
 			{
 				// Remove the child from the scene
-				if (_lock != null) {
+			
 				_lock.resetLocksList();
 				_lock.QueueFree();
-				}
+				
 			}
-			else if (child is Player player) {
+			if (child is Player player) {
 				player.ResetKeys();
 				player.QueueFree();	
 			}
         }
+		
 		
 		// reset lock list
 
