@@ -81,7 +81,15 @@ public partial class DinoRunner : MicroGame
 	public void game_over()
 	{
 		GetTree().Paused = true;
+		restart();
 		
+	}
+
+	public void restart()
+	{
+		
+			GetTree().Paused = false;
+			GetTree().ReloadCurrentScene();
 	}
 
 	// Called when the node enters the scene tree for the first time.
@@ -130,6 +138,10 @@ public partial class DinoRunner : MicroGame
 			_ground.Position = _groundPos;
 		}
 		
+		if (Input.IsActionJustPressed("dino-game-restart"))
+		{
+			restart();
+		}
 
 	}
 }
