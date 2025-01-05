@@ -3,7 +3,7 @@ using System.Collections.Generic;
 public partial class Player : CharacterBody2D
 
 {
-    [Export] public float SlideSpeed = 300f;  // Speed of movement
+    [Export] public float SlideSpeed = 300;  // Speed of movement
     private const int GridSize = 10;  // Size of each grid cell
     private const float CollisionBuffer = 2f;  // Buffer distance to prevent false invalid checks
 
@@ -12,7 +12,13 @@ public partial class Player : CharacterBody2D
     private bool _isSliding = false;
     private Vector2 _direction = Vector2.Zero;
 
+    private AnimatedSprite2D _animatedSprite;
 
+
+    public override void _Ready()
+    {
+        _animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+    }
 public void CollectKey(string color)
     {
         keysCollected.Add(color);
@@ -43,12 +49,46 @@ public void ResetKeys()
                 StartSliding(Vector2.Up);
             else if (Input.IsActionJustPressed("ui_down"))
                 StartSliding(Vector2.Down);
-            else if (Input.IsActionJustPressed("ui_left"))
+            else if (Input.IsActionJustPressed("ui_left")) {
+
+            
                 StartSliding(Vector2.Left);
+                // play left animation
+                PlayAnimation("Left");
+                FlipCharacter(false); // Face left
+            }
             else if (Input.IsActionJustPressed("ui_right"))
-                StartSliding(Vector2.Right);
+             {   StartSliding(Vector2.Right);
+                // play reversed left animation
+                PlayAnimation("Left");
+                FlipCharacter(true); // Face left
+             }
+            else {
+                // Stop the sliding animation if no input is detected
+                PlayAnimation("idle");
+            }
         }
     }
+
+private void FlipCharacter(bool facingRight)
+    {
+        // Flip the character horizontally by adjusting the Scale.x
+        Vector2 scale = Scale;
+        scale.X = facingRight ? Mathf.Abs(scale.X) : -Mathf.Abs(scale.X);
+        Scale = scale;
+    }
+
+private void PlayAnimation(string animationName)
+    {
+        if (_animatedSprite is AnimatedSprite2D animatedSprite)
+        {
+            if (animatedSprite.Animation != animationName)
+            {
+                animatedSprite.Play(animationName);
+            }
+        }
+    }
+
 
     private void StartSliding(Vector2 direction)
     {
