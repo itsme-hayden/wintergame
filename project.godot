@@ -23,8 +23,8 @@ GameUtil="*res://assets/shared/scenes/GameUtil.cs"
 
 [display]
 
-window/size/viewport_width=375
-window/size/viewport_height=812
+window/size/viewport_width=812
+window/size/viewport_height=375
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"

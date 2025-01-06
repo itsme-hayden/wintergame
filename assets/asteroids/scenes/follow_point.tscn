@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://pejwiuvuuu7f"]
+
+[ext_resource type="Texture2D" uid="uid://b04awfejmd3o5" path="res://assets/asteroids/graphics/rocket.png" id="1_lpqwb"]
+
+[node name="FollowPoint" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_lpqwb")
